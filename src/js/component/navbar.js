@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../img/Star-Wars-Logo-5.png"
+import logo from "../../img/Rick_and_Morty.svg.png"
 
 export const Navbar = () => {
 	return (
@@ -8,12 +8,6 @@ export const Navbar = () => {
 			<Link to="/">
 				<img src={logo} className="logo" />
 			</Link>
-
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
 
 			<div className="ml-auto">
 				<div className="btn-group">

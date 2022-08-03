@@ -6,13 +6,13 @@ export const Cards = () => {
         <div className="card container-fluid">
             <img src={sample} className="card-img-top sample" />
             <div className="card-body">
-                <h5 className="card-title">Luke Skywalker</h5>
+                <h5 className="card-title">Rick Sanchez</h5>
                 <p className="card-text">
-                    Gender: MaleHair 
+                    Gender: Male
                     <br />
-                    Color: Blond 
+                    Hair Color: White 
                     <br />
-                    Eye Color: Blue
+                    Eye Color: Black
                 </p>
                 <a href="#" className="btn btn-primary">Learn More!</a>
                 <a href="#" className="btn btn-danger float">♥</a>

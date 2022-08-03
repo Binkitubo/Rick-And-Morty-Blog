@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-const Details = () => {
+export const Details = () => {
 
     const params = useParams();
     console.log(params);
@@ -18,5 +18,3 @@ const Details = () => {
         </div>
     );
 };
-
-export default Details;
