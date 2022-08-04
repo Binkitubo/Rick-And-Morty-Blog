@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Home } from "./views/home";
-import { Details } from "./views/details";
+import { Details } from "./views/characterDetails";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
+import { Footer } from "./component/footer";
 
 //create your first component
 const Layout = () => {
@@ -27,6 +28,7 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
+					<Footer />
 			</BrowserRouter>
 		</div>
 	);

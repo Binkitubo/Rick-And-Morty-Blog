@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../styles/index.css";
-import { Cards } from "../component/card";
+import { CharacterCards } from "../component/characterCard";
+import { LocationCards } from "../component/locationCard";
 
 export const Home = () => {
 
-	return (
-		<div className="scroll">
+		return (
+		<>
+			<div className="scroll">
 			<h1>Characters</h1>
-			<div className="test">
-				<Cards />
+				<CharacterCards />
 			</div>
-		</div>
+			
+			<div  className="scroll">
+			<p className="spacer"></p>
+			<h1>Locations</h1>
+				<LocationCards />
+			</div>
+		</>
 	);
 };

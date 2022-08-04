@@ -8,8 +8,7 @@ export const Details = () => {
 
     return (
         <div className="jumbotron">
-            <h1 className="display-4">Detalles del personaje</h1>
-            <hr className="my-4" />
+            <h1 className="display-4">Details</h1>
             <Link to="/">
                 <span className="btn btn-primary btn-lg" href="#" role="button">
                     Return home
