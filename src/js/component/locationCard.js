@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
-import sample from "../../img/400x200.png"
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
+const heart = <FontAwesomeIcon icon={faHeart} />
 
 export const LocationCards = () => {
 
@@ -25,10 +28,10 @@ export const LocationCards = () => {
                     <br />
                     Dimension: {location.dimension} 
                 </p>
-                <Link to={`/details/${location.id}`} className="btn btn-primary">
+                <Link to={`/details/${location.id}`} className="btn btn-success">
                     Learn More!
                 </Link>
-                <a href="#" className="btn btn-danger float">♥</a>
+                <a href="#" className="btn btn-success float">{heart}</a>
             </div>
         </div>
     );

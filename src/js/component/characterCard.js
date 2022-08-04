@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
-import sample from "../../img/400x200.png"
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
+const heart = <FontAwesomeIcon icon={faHeart} />
 
 export const CharacterCards = () => {
 
@@ -17,20 +20,20 @@ export const CharacterCards = () => {
     const html = list.map((character) => {
     return (
         <div className="card container-fluid">
-            <img src="https://images6.alphacoders.com/909/thumb-1920-909641.png" className="card-img-top sample" />
+            <img src={character.image} className="card-img-top sample" />
             <div className="card-body">
-                <h5 className="card-title">{character.name}</h5>
+                <h5 className="card-title"><strong>{character.name}</strong></h5>
                 <p className="card-text">
-                    Gender: {character.gender}
+                    <strong>Gender: </strong>{character.gender}
                     <br />
-                    Species: {character.species} 
+                    <strong>Species: </strong>{character.species} 
                     <br />
-                    Origin: {character.origin.name}
+                    <strong>Origin: </strong>{character.origin.name}
                 </p>
-                <Link to={`/details/${character.id}`} className="btn btn-primary">
+                <Link to={`/details/${character.id}`} className="btn btn-success">
                     Learn More!
                 </Link>
-                <a href="#" className="btn btn-danger float">♥</a>
+                <a href="#" className="btn btn-success float">{heart}</a>
             </div>
         </div>
     );

@@ -10,7 +10,7 @@ export const Details = () => {
         <div className="jumbotron">
             <h1 className="display-4">Details</h1>
             <Link to="/">
-                <span className="btn btn-primary btn-lg" href="#" role="button">
+                <span className="btn btn-success btn-lg" href="#" role="button">
                     Return home
                 </span>
             </Link>

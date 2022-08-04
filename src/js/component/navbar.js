@@ -11,7 +11,7 @@ export const Navbar = () => {
 
 			<div className="ml-auto">
 				<div className="btn-group">
-					<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					<button type="button" className="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						Favorites <span className="badge text-bg-secondary">5</span>
 					</button>
 					<ul className="dropdown-menu">

@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Armata&display=swap');
 
 body {
-    background-color: lightblue;
+    background-color: #021519;
+    font-family: 'Armata';
 }
 
 .logo {
@@ -9,6 +12,17 @@ body {
 
 h1 {
     margin-top: 30px;
+    font-family: 'Permanent Marker';
+    -webkit-text-stroke: 1px black; 
+    color: #daff50;
+    text-shadow: 0 0 5px #c0df40, 0 0 5px #c0df40, 0 0 5px #c0df40;
+}
+
+h2 {
+    font-family: 'Permanent Marker';
+    -webkit-text-stroke: 1px black;
+    color: #daff50;
+    text-shadow: 0 0 5px #c0df40, 0 0 5px #c0df40, 0 0 5px #c0df40;
 }
 
 .card {
@@ -16,11 +30,14 @@ h1 {
     margin: 30px 40px 20px 0;
     width: 22rem;
     padding: 0;
+    border-color: #c0df40;
+    background-color: #021519;
+    color: #daff50;
 }
 
 .navbar {
-    padding: 0 20px;
-    background-color: transparent !important;
+    padding: 10px 20px;
+    background-color: #021519 !important;
 }
 
 .scroll {
@@ -29,17 +46,54 @@ h1 {
     white-space: nowrap;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #daff50;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #648000;
+  }
+
 .float {
     float: right;
 }
 
 .spacer {
     margin: 50px 0 40px 0;
-    border-bottom: lightgray solid 1px;
+    border-bottom: #c0df40 solid 1px;
 }
 
 .footer {
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #c0df40;
     margin: 50px;
     padding-bottom: 30px;
+}
+
+.btn-success {
+    background-color: #c0df40;
+    border-color: #c0df40;
+    color: black;
+}
+
+.btn-success:hover {
+    box-shadow: 0 0 15px #daff50;
+    background-color: #daff50;
+    border-color: #c0df40;
+    color: black;
+}
+
+.text-bg-secondary {
+    background-color: #021519;
+}
+
+.text-bg-secondary:focus {
+    background-color: #021519;
 }
