@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Home } from "./views/home";
-import { Details } from "./views/Details";
+import { CharacterDetails } from "./views/characterDetails";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { LocationDetails } from "./views/locationDetails";
 
 //create your first component
 const Layout = () => {
@@ -21,8 +22,11 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/details/:id">
-							<Details />
+						<Route exact path="/character/details/:id">
+							<CharacterDetails />
+						</Route>
+						<Route exact path="/location/details/:id">
+							<LocationDetails />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

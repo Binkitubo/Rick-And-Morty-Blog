@@ -35,6 +35,15 @@ h2 {
     color: #daff50;
 }
 
+.detailsCard {
+    width: 25rem;
+    padding: 0;
+    border: 1px solid #c0df40;
+    border-radius: 0.25rem;
+    background-color: #021519;
+    color: #daff50;
+}
+
 .navbar {
     padding: 10px 20px;
     background-color: #021519 !important;
@@ -67,7 +76,7 @@ h2 {
 }
 
 .spacer {
-    margin: 50px 0 40px 0;
+    margin: 50px 50px 15px 50px;
     border-bottom: #c0df40 solid 1px;
 }
 
@@ -90,10 +99,35 @@ h2 {
     color: black;
 }
 
+.btn-success:focus {
+    box-shadow: 0 0 15px #daff50;
+    background-color: #daff50;
+    border-color: #c0df40;
+    color: black;
+}
+
 .text-bg-secondary {
     background-color: #021519;
 }
 
-.text-bg-secondary:focus {
-    background-color: #021519;
+.details span {
+    margin-left: 40px;
+    margin-top: 10px;
 }
+
+.details h1 {
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    cursor: default;
+}
+
+.dropdown-item:hover {
+    background-color: #c6e742;
+}
+
+.btn-group {
+    margin-right: 60px;
+}
+

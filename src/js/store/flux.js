@@ -1,43 +1,48 @@
-const getState = ({ getStore, getActions, setStore }) => {
+const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			characterCard: [],
+			locationCard: [],
+			characterDetails: [],
+			locationDetails: [],
+			addFav: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			loadCharacterCard: () => {
+				fetch("https://rickandmortyapi.com/api/character")
+					.then((response) => response.json())
+					.then((data) => setStore({ characterCard: data.results }));
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+
+			loadCharacterDetails: (id) => {
+				fetch(`https://rickandmortyapi.com/api/character/${id}`)
+					.then((response) => response.json())
+					.then((data) => setStore({ characterDetails: data }));
 			},
-			changeColor: (index, color) => {
-				//get the store
+
+			loadLocationCard: () => {
+				fetch("https://rickandmortyapi.com/api/location")
+					.then((response) => response.json())
+					.then((data) => setStore({ locationCard: data.results }));
+			},
+
+			loadLocationDetails: (id) => {
+				fetch(`https://rickandmortyapi.com/api/location/${id}`)
+					.then((response) => response.json())
+					.then((data) => setStore({ locationDetails: data }));
+			},
+
+			handleFav: (addElem) => {
 				const store = getStore();
+				setStore({ addFav: [...store.addFav, addElem] });
+			},
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
+			handleDelete: (i) => {
+				const store = getStore();
+				const newList = store.addFav.filter((item) => item !== i);
+				setStore({ addFav: newList });
+			},
 		}
 	};
 };
